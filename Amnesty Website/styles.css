@@ -1,0 +1,193 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    background-color: #ffff00;
+    color: #000;
+    padding: 10px 20px;
+    position: scroll;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: -10px;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .navv {
+    display: inline-flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1em;
+    background-color: #ffff00;
+    padding: 26px 50px;
+    margin-inline: -10px;
+}
+
+nav ul li a:hover {
+    background-color: #fff4d3;
+}
+
+.hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    color: black;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color:rgba(0, 0, 0, 0.7)
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto; /* Memungkinkan scrolling horizontal */
+    scroll-snap-type: x mandatory; /* Memastikan elemen berhenti di tempat yang sesuai */
+    scroll-behavior: smooth; /* Scroll dengan animasi mulus */
+    gap: 0;
+    padding: 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Menyembunyikan scrollbar di browser berbasis WebKit (Chrome, Safari) */
+}
+
+.carousel {
+    -ms-overflow-style: none; /* Menyembunyikan scrollbar di Internet Explorer dan Edge */
+    scrollbar-width: none;    /* Menyembunyikan scrollbar di Firefox */
+}
+
+.slide {
+    min-width: 300px;
+    margin: 20px;
+    scroll-snap-align: start;
+    position: relative;
+    flex: 0 0 53%; /* Setiap slide memiliki lebar 100% */
+}
+
+.slide img {
+    display: block; /* Hilangkan spasi inline bawaan elemen img */
+    width: 100%; /* Pastikan gambar memenuhi seluruh lebar slide */
+    height: auto; /* Otomatis menyesuaikan tinggi gambar */
+    margin: 0; /* Hilangkan margin gambar */
+    padding: 0; /* Pastikan tidak ada padding */
+    border: none; /* Hilangkan border jika ada */
+}
+
+.description {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 53%;
+    text-align: center;
+}
+
+#about, #work, #contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about h2, #work h2, #contact h2 {
+    border-bottom: 2px solid #ffff00;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.work-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.work-item {
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 20px;
+    width: 300px;
+}
+
+.research {
+    background-color: #fff;
+}
+
+.campaign {
+    background-color: #ffff00;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #000;
+    outline: none;
+}
+
+form button {
+    background-color: #ffff00;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #000;
+    color: #ffff00;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
